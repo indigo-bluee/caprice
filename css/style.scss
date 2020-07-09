@@ -243,18 +243,21 @@ $rine-color: #E2DCD9;
   }
 
   /*ヘッダーメイン*/
+  #home {
+    min-height: 100vh;
+    background: url(../images/top.jpg);
+  }
   .bg-img {
-      background: url(../images/top.jpg);
       background-size: cover;
       background-color:rgba(34, 27, 8, 0.979);
       background-blend-mode: screen;
       background-position: center top;
-      min-height: 100vh;
       .main_contents {
           text-align: center;
+          padding-top: 30%;
           h1{
               color: #ffffff;
-              padding: 30% 0 1.5% 0;
+              margin-bottom: 1%;
               font-size: 3rem;
               line-height: 3rem;
               letter-spacing: 0.6rem;
@@ -263,7 +266,6 @@ $rine-color: #E2DCD9;
               color: #ffffff;
               background-color: $main-color;
               padding: 5px 10px;
-              text-align: center;
               font-weight: bold;
               width: 360px;
               letter-spacing: 0.5rem;
@@ -434,6 +436,19 @@ footer {
 ------------------------*/
 @media screen and (max-width:960px) {
 
+
+  /*header
+------------------------*/
+/*ヘッダーメイン*/
+
+
+.main_contents {
+  padding-top: 30%;
+  h1 {
+   padding-bottom: 1%;
+  }
+ }
+
   /*visual
 ------------------------*/
 
@@ -444,7 +459,9 @@ footer {
   }
 
   .bg-img{
+    width: 100%;
     height: 500px;
+    object-fit: cover;
   .main_contents {
     h1 {
     padding: 32% 0 1.5% 0;
@@ -459,7 +476,7 @@ footer {
 
 
 
-}
+}// タブレット終わり
 
 
 
@@ -502,12 +519,10 @@ footer {
 /*main
 ------------------------*/
 .main_contents {
-  max-width: 100%;
-  margin: 0 auto;
+  padding-top: 50%;
   h1 {
     font-size: 11vmin;
     line-height: 11vmin;
-    padding: 280px 0 20px 0;
     white-space: nowrap;
     width: 80%;
     margin: 0 auto;
@@ -516,7 +531,6 @@ footer {
   }
   p {
     font-size: 0.6875rem;
-    text-align: center;
     letter-spacing: 1vmin;
     white-space: nowrap;
     width: 85%;
