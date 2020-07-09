@@ -1,0 +1,705 @@
+@charset "UTF-8";
+/*基本レイアウトの調整
+------------------------*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'sans-serif';
+  line-height: 2;
+  color: #251C15;
+}
+
+a {
+  text-decoration: none;
+  color: #251C15;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0% 4%;
+}
+
+/*ローディング 
+------------------------*/
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  z-index: 1;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -50px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+/*h2タイトル
+------------------------*/
+.page-title {
+  text-align: center;
+  font-size: 1.7rem;
+  border-bottom: 2.5px #E2DCD9 solid;
+  width: 125px;
+  margin: 0 auto;
+  letter-spacing: 0.2rem;
+}
+
+/*中画像
+------------------------*/
+.middle-img {
+  height: 300px;
+  width: 1200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*ヘッダー
+------------------------*/
+/*ヘッダー上部*/
+.header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header_menu img {
+  padding: 18px 25px;
+  width: 140px;
+}
+
+.header_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header_menu ul li {
+  padding-top: 15px;
+}
+
+.header_menu ul li a {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 18px 25px;
+}
+
+/*ハンバーガーけす*/
+.el_humburger {
+  display: none;
+}
+
+/*ハンバーガーボタン*/
+.header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+}
+
+.el_humburger {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 26px;
+  height: auto;
+  padding-top: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 10000;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.el_humburger > span {
+  display: block;
+  width: 100%;
+  margin: 0 auto 6px;
+  height: 3px;
+  background: #000;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.el_humburger > span:last-child {
+  margin-bottom: 0;
+}
+
+.js_humburgerOpen .el_humburger > span {
+  background: #000;
+}
+
+.js_humburgerOpen .el_humburger > span.top {
+  -webkit-transform: translateY(9px) rotate(-45deg);
+          transform: translateY(9px) rotate(-45deg);
+}
+
+.js_humburgerOpen .el_humburger > span.middle {
+  opacity: 0;
+}
+
+.js_humburgerOpen .el_humburger > span.bottom {
+  -webkit-transform: translateY(-9px) rotate(45deg);
+          transform: translateY(-9px) rotate(45deg);
+}
+
+.el_humburgerButton.el_humburgerButton__close {
+  top: 2%;
+  right: 2%;
+}
+
+.el_humburgerButton__close > span {
+  display: block;
+  width: 35px;
+  margin: 0 auto;
+  height: 4px;
+  background: #fff;
+}
+
+.el_humburgerButton__close > span.el_humburgerLineTop {
+  -webkit-transform: translateY(5px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
+}
+
+.el_humburgerButton__close > span.el_humburgerLineBottom {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+}
+
+/*ナビゲーション*/
+.navigation {
+  display: none;
+  max-width: 100%;
+}
+
+.navigation.js_appear {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: 9999;
+}
+
+.navigation_screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  z-index: 0;
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.navigation_screen i {
+  font-size: 1.7rem;
+  padding-right: 10px;
+  margin-top: 80px;
+}
+
+.navigation_wrapper {
+  padding: 80px 0 0 0;
+  text-align: center;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.navigation_item {
+  font-size: 18px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 15px 15px;
+  border-bottom: 1px #E2DCD9 solid;
+}
+
+.navigation_item > a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.js_fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/*ヘッダーメイン*/
+.bg-img {
+  background: url(../images/top.jpg);
+  background-size: cover;
+  background-color: rgba(34, 27, 8, 0.979);
+  background-blend-mode: screen;
+  background-position: center top;
+  min-height: 100vh;
+}
+
+.bg-img .main_contents {
+  text-align: center;
+}
+
+.bg-img .main_contents h1 {
+  color: #ffffff;
+  padding: 30% 0 1.5% 0;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: 0.6rem;
+}
+
+.bg-img .main_contents p {
+  color: #ffffff;
+  background-color: #251C15;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  width: 360px;
+  letter-spacing: 0.5rem;
+  margin: 0 auto;
+  font-size: 0.7rem;
+}
+
+/*about
+------------------------*/
+.about {
+  padding-top: 120px;
+}
+
+.about p {
+  padding: 70px  140px 80px;
+}
+
+.about img {
+  height: 320px;
+  width: 1200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 0%;
+     object-position: 100% 0%;
+}
+
+/*menu
+------------------------*/
+.menu-wr {
+  padding-top: 120px;
+}
+
+.menu-gird {
+  padding-top: 70px;
+  display: -ms-grid;
+  display: grid;
+  gap: 50px 20px;
+  -ms-grid-columns: (minmax(286px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+}
+
+.menu-gird img {
+  vertical-align: bottom;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.menu-gird i {
+  padding-left: 10px;
+}
+
+.menu-gird a {
+  text-align: center;
+  background-color: #251C15;
+  color: #ffffff;
+  padding: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.menu-gird .item li {
+  list-style: none;
+}
+
+.menu-gird .item li .submenu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__item {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 1px;
+  position: relative;
+}
+
+.menu__item__link {
+  color: #fff;
+  display: block;
+  padding: 1rem;
+}
+
+.submenu {
+  background: #fff;
+  display: none;
+}
+
+.submenu__item {
+  border-bottom: 1px solid #E2DCD9;
+  color: #222;
+  padding: 1rem;
+}
+
+/*visual
+------------------------*/
+.visual-wr {
+  padding-top: 120px;
+}
+
+.visual-wr .visual {
+  padding-top: 70px;
+  display: -ms-grid;
+  display: grid;
+  gap: 50px 20px;
+  -ms-grid-columns: (minmax(286px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  padding-top: 70px;
+}
+
+.visual-wr .visual .itm {
+  max-width: 100%;
+}
+
+/*access
+------------------------*/
+.access {
+  padding-top: 120px;
+}
+
+.access dl {
+  margin: 0 auto;
+  padding: 70px 0 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 350px;
+}
+
+.access dl dd {
+  width: 70%;
+}
+
+.access dl dt {
+  width: 30%;
+}
+
+.access img {
+  height: 320px;
+  width: 1200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.access p {
+  text-align: center;
+  padding-top: 70px;
+}
+
+.access .btn {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.access .btn a {
+  padding: 25px 60px;
+  background-color: #251C15;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
+
+.access .btn a i {
+  padding-right: 10px;
+  font-size: 1.3rem;
+}
+
+/*フッター
+------------------------*/
+footer {
+  margin: 120px 25px 30px;
+  text-align: center;
+  border-top: 1px solid #E2DCD9;
+}
+
+footer i {
+  padding: 50px 8px 15px 0px;
+  font-size: 1.6rem;
+}
+
+/*タブレット版
+------------------------*/
+@media screen and (max-width: 960px) {
+  /*visual
+------------------------*/
+  .about p {
+    padding: 70px 50px 80px;
+  }
+  .bg-img {
+    height: 500px;
+  }
+  .bg-img .main_contents h1 {
+    padding: 32% 0 1.5% 0;
+  }
+  .bg-img .main_contents p {
+    width: 355px;
+  }
+}
+
+/*モバイル版
+------------------------*/
+@media screen and (max-width: 600px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  /*　画面サイズが480px以下の場合ここの記述が適用される　*/
+  .page-title {
+    margin-bottom: 10%;
+    font-size: 1.5rem;
+  }
+  /*header
+------------------------*/
+  /*ハンバーガー表示*/
+  .el_humburger {
+    display: block;
+  }
+  /*ヘッダー ハンバーガー*/
+  .bg-img {
+    max-width: 100%;
+    height: auto;
+    /*main
+------------------------*/
+  }
+  .bg-img .header_menu {
+    max-width: 100%;
+    /*ハンバーガーの中*/
+  }
+  .bg-img .header_menu nav {
+    display: none;
+  }
+  .bg-img .header_menu img {
+    padding: 18px 14px;
+    width: 115px;
+  }
+  .bg-img .main_contents {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .bg-img .main_contents h1 {
+    font-size: 11vmin;
+    line-height: 11vmin;
+    padding: 280px 0 20px 0;
+    white-space: nowrap;
+    width: 80%;
+    margin: 0 auto;
+    letter-spacing: 2vmin;
+  }
+  .bg-img .main_contents p {
+    font-size: 0.6875rem;
+    text-align: center;
+    letter-spacing: 1vmin;
+    white-space: nowrap;
+    width: 85%;
+  }
+  /*About
+------------------------*/
+  .about {
+    padding-top: 20%;
+  }
+  .about p {
+    padding: 0;
+    margin-bottom: 10%;
+    font-size: 0.875rem;
+  }
+  .about img {
+    height: 180px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /*menu
+------------------------*/
+  .menu-wr {
+    padding-top: 20%;
+  }
+  .menu-wr .menu-gird {
+    padding: 0%;
+  }
+  .menu-wr .menu-gird .item img {
+    height: 150px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu-wr .menu-gird .item .menu__item p {
+    font-size: 0.875rem;
+  }
+  .menu-wr .menu-gird .item .menu__item a {
+    font-size: 0.875rem;
+  }
+  /*visual
+ ------------------------*/
+  .visual-wr {
+    padding-top: 20%;
+  }
+  .visual-wr .visual {
+    position: relative;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    height: 180px;
+    margin: 0% 4%;
+    overflow: hidden;
+  }
+  .visual-wr .visual img {
+    /* --- 背景の指定 ------------------------------------------- */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-animation: bgAnime 15s infinite;
+            animation: bgAnime 15s infinite;
+    /* 4画像 × 各5s = 20s */
+  }
+  .visual-wr .visual .img1 {
+    background-image: url(../images/visual_1.png);
+    /* 背景の画像を指定 */
+  }
+  .visual-wr .visual .img2 {
+    background-image: url(../images/visual_2.png);
+    /* 背景の画像を指定 */
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  .visual-wr .visual .img3 {
+    background-image: url(../images/visual_3.png);
+    /* 背景の画像を指定 */
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  @-webkit-keyframes bgAnime {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes bgAnime {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /*access
+ ------------------------*/
+  .access {
+    padding-top: 20%;
+  }
+  .access dl {
+    width: 100%;
+    padding: 0% 0% 10%;
+    font-size: 0.875rem;
+  }
+  .access img {
+    height: 180px;
+  }
+  .access p {
+    font-size: 0.875rem;
+    padding-top: 10%;
+  }
+  .access .btn {
+    padding-top: 4%;
+  }
+  .access .btn a {
+    font-size: 1.2rem;
+    padding: 15px 60px;
+    display: block;
+  }
+  /*footer
+ ------------------------*/
+  footer {
+    margin: 20% 4% 0% 4%;
+  }
+  footer i {
+    font-size: 2rem;
+  }
+  footer small {
+    font-size: 3.2vmin;
+    white-space: nowrap;
+  }
+}
+
+/*モバイルend*/
+/*# sourceMappingURL=style.css.map */

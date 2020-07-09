@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Italian料理サイト">
+    <title>Capricesite</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="script/index.js" charset="utf-8"></script>
+</head>
+<body>
+  <div id="loader-bg">
+    <div id="loader">
+      <img src="images/loading.gif"  alt="Now Loading..." />
+    </div>
+  </div>
+
+  <div id="wrap">
+
+   <div class="bg-img">
+        <div class="header">
+            <div class="header_menu">
+                <img src="images/logp.png" alt="">
+                <nav>              
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#visual">Visual</a></li>
+                        <li><a href="#access">Access</a></li>
+                    </ul>
+                </nav>
+            </div><!-- header_menu end pc-->
+
+            <div class="el_humburger">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+            </div><!-- el_humburger end mb-->
+            
+            <div id="navigation" class="navigation">
+            <div class="navigation_screen">
+                <nav class="navigation_wrapper">
+                <div class="navigation_item"><a href ="#about">About</a></div>
+                <div class="navigation_item"><a href ="#menu">Menu</a></div>
+                <div class="navigation_item"><a href ="#visual">Visual</a></div>
+                <div class="navigation_item"><a href ="#access">Access</a></div>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                </nav>
+            </div>
+            </div><!-- navigation end mb-->
+        </div>
+        <div class="main_contents wrapper">
+            <h1>“Colora il <br>tuo cuore”</h1>
+            <p>pizza pasta wine etc…</p>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="about wrapper">
+          <h2 class="page-title">About</h2>
+          <p>リーズナブルな値段で手軽にイタリア料理を楽しめるイタリアン料理店です。オーナーが現地で厳選した食材を使っていますので、高級レストランのような食事が味わえます。<br>
+            余談ですが店名のCapriceは、イタリア語で「気まぐれ」を意味します。お客さまに気構えずふらっと立ち寄ってもらいたいという気持ちを込めました。</p>
+            <img src="images/about.jpg" alt="market-img">
+        </div><!-- aboutn end -->
+      </div><!-- aboutn ページ内リンク -->
+
+      <div id="menu">
+        <div class="menu-wr wrapper">
+        <h2 class="page-title">Menu</h2>
+        <ul class="menu-gird">
+
+          <div class="item">
+                <img src="images/pasta.png" alt="" />
+                <li class="menu__item">
+                    <a class="menu__item__link js-menu__item__link" href="">Pasta<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <p class="menu-title">カチョ・エ・ペペ</p>
+                            <p class="menu-price">¥1,200</p>
+                        </li>
+                        <li class="submenu__item">
+                          <p class="menu-title">ジェノベーゼ</p>
+                          <p class="menu-price">¥1,100</p>
+                        </li>
+                        <li class="submenu__item">
+                          <p class="menu-title">ボロネーゼ</p>
+                          <p class="menu-price">¥1,500</p>
+                        </li>
+                        <li class="submenu__item">
+                          <p class="menu-title">アラビアータ</p>
+                          <p class="menu-price">¥950</p>
+                        </li>
+                    </ul>
+                </li>
+                </div>
+
+                <div class="item">
+                <img src="images/pizza.png" alt="" />
+                <li class="menu__item">
+                  <a class="menu__item__link js-menu__item__link" href="">Pizza<i class="fas fa-chevron-down"></i></a>
+                  <ul class="submenu">
+                      <li class="submenu__item">
+                        <p class="menu-title">マルゲリータ</p>
+                        <p class="menu-price">¥1,450</p>
+                      </li>
+                      <li class="submenu__item">
+                        <p class="menu-title">ジェノバ</p>
+                        <p class="menu-price">¥1,350</p>
+                      </li>
+                      <li class="submenu__item">
+                        <p class="menu-title">マリナーラ</p>
+                        <p class="menu-price">￥1,300</p>
+                      </li>
+                      <li class="submenu__item">
+                        <p class="menu-title">チーズピッツァ</p>
+                        <p class="menu-price">¥1,200</p>
+                      </li>
+                  </ul>
+              </li>
+            </div>
+
+            <div class="item">
+              <img src="images/meat.png" alt="" /> 
+              <li class="menu__item">
+                <a class="menu__item__link js-menu__item__link" href="">Meat<i class="fas fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                      <p class="menu-title">仔牛のステーキオリーブ風味</p>
+                      <p class="menu-price">¥1,500</p>
+                    </li>
+                    <li class="submenu__item">
+                      <p class="menu-title">仔牛のグリルレモンソース</p>
+                      <p class="menu-price">¥1,600</p>
+                    </li>
+                    <li class="submenu__item">
+                      <p class="menu-title">地鶏のヨーグルトマリネ</p>
+                      <p class="menu-price">¥1,650</p>
+                    </li>
+                    <li class="submenu__item">
+                      <p class="menu-title">黒豚のグリルバルサミコソース</p>
+                      <p class="menu-price">¥1.700</p>
+                    </li>
+                </ul>
+            </li>
+          </div>
+
+          <div class="item">
+            <img src="images/wine.png" alt="" />
+            <li class="menu__item">
+              <a class="menu__item__link js-menu__item__link" href="">Wine<i class="fas fa-chevron-down"></i></a>
+              <ul class="submenu">
+                  <li class="submenu__item">
+                    <p class="menu-title">モンテクリスト</p>
+                    <p class="menu-price">¥2,500</p>
+                  </li>
+                  <li class="submenu__item">
+                    <p class="menu-title">マルヴァジーア</p>
+                    <p class="menu-price">¥2,400</p>
+                  </li>
+                  <li class="submenu__item">
+                    <p class="menu-title">バローネロッソ</p>
+                    <p class="menu-price">¥3,000</p>
+                  </li>
+                  <li class="submenu__item">
+                    <p class="menu-title">ヴェルドゥッツォ</p>
+                    <p class="menu-price">¥3,500</p>
+                  </li>
+              </ul>
+          </li>
+          </div>
+
+        <div class="item">
+         <img src="images/special.png" alt="" />
+          <li class="menu__item">
+            <a class="menu__item__link js-menu__item__link" href="">Special Menu<i class="fas fa-chevron-down"></i></a>
+            <ul class="submenu">
+                <li class="submenu__item">
+                  <p class="menu-title">バジルのリゾット</p>
+                  <p class="menu-price">¥1,000</p>
+                </li>
+                <li class="submenu__item">
+                  <p class="menu-title">アクアパッツァ</p>
+                  <p class="menu-price">¥1,100</p>
+                </li>
+                <li class="submenu__item">
+                  <p class="menu-title">リボリータ</p>
+                  <p class="menu-price">¥980</p>
+                </li>
+                <li class="submenu__item">
+                  <p class="menu-title">カチャトーラ</p>
+                  <p class="menu-price">¥970</p>
+                </li>
+            </ul>
+          </li>
+        </div>
+
+        <div class="item">
+        <img src="images/side.png" alt="" />
+        <li class="menu__item">
+          <a class="menu__item__link js-menu__item__link" href="">Side Menu<i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+              <li class="submenu__item">
+                <p class="menu-title">モッツァレラのカプレーゼ</p>
+                <p class="menu-price">¥600</p>
+              </li>
+              <li class="submenu__item">
+                <p class="menu-title">海鮮アヒージョ</p>
+                <p class="menu-price">¥750</p>
+              </li>
+              <li class="submenu__item">
+                <p class="menu-title">カルパッチョ</p>
+                <p class="menu-price">¥700</p>
+              </li>
+              <li class="submenu__item">
+                <p class="menu-title">サーモンのマリネ</p>
+                <p class="menu-price">¥650</p>
+              </li>
+          </ul>
+        </li>
+         </div>
+        </ul>
+
+
+      </ul>
+    </div>
+    </div><!-- menu ページ内リンク -->
+      
+    <div id="visual">
+    <div class="visual-wr">
+      <h2 class="page-title">visual</h2>
+         <div class="visual wrapper">
+            <div class="itm">
+                <img class="img1" src="images/visual_1.png" alt="Wine">
+            </div>
+              <div class="itm">
+                <img class="img2" src="images/visual_2.png" alt="Special Menu">
+              </div>
+              <div class="itm">
+                <img class="img3" src="images/visual_3.png" alt="Side Menu">
+              </div>
+         </div><!-- visualend -->
+        </div>
+      </div><!-- visual ページ内リンク -->
+
+      <div id="access">
+         <div class="access wrapper">
+            <h2 class="page-title">Access</h2>
+            <dl>
+                <dt>Address</dt>
+                <dd>東京都渋谷区　足立ビル　1-1-1</dd>
+                <dt>Tel</dt>
+                <dd>080-1111-1111</dd>
+                <dt>Info</dt>
+                <dd>Open 10:00 Close 20:00<br>
+                    Closed Sun/sat
+                </dd>
+              </dl>
+            <img src="images/access.jpg" alt="market-img">
+            <p>メールのお問い合わせはこちら</p>
+            <div class="btn">            
+            <a href=""><i class="far fa-envelope"></i>Contact</a>
+            </div>
+         </div>
+        </div><!-- access ページ内リンク -->
+
+         <footer>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i> </a>
+                <p><small>Copyright &copy; 2020 Caprice Inc. All Rights Reserved.</small></p>
+         </footer>
+
+  </div>
+
+
+</body>
+</html>
