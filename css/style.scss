@@ -254,7 +254,7 @@ $rine-color: #E2DCD9;
       background-position: center top;
       .main_contents {
           text-align: center;
-          padding-top: 300px;
+          padding: 350px 10px 300px 10px;
           h1{
               color: #ffffff;
               margin-bottom: 1%;
@@ -266,7 +266,6 @@ $rine-color: #E2DCD9;
               color: $main-color;
               padding: 5px 10px;
               font-weight: bold;
-              width: 420px;
               letter-spacing: 0.1rem;
               margin: 0 auto;
               font-size: 0.8rem;
@@ -437,7 +436,7 @@ footer {
 @media screen and (min-width:768px)and (max-width: 1023px) {
   .bg-img .main_contents {
     text-align: center;
-    padding-top: 200px;
+    padding: 200px;
 }
 }
 
@@ -525,7 +524,7 @@ footer {
   min-height: 100vh;
 }
 .main_contents {
-  padding-top: -60px;
+  padding-top: 280px;
   h1 {
     font-size: 11vmin;
     line-height: 11vmin;
