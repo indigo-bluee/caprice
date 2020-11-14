@@ -276,7 +276,7 @@ img {
 
 .bg-img .main_contents {
   text-align: center;
-  padding-top: 25%;
+  padding-top: 300px;
 }
 
 .bg-img .main_contents h1 {
@@ -292,7 +292,7 @@ img {
   padding: 5px 10px;
   font-weight: bold;
   width: 420px;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   margin: 0 auto;
   font-size: 0.8rem;
 }
@@ -480,6 +480,13 @@ footer i {
 
 /*タブレット版 ipadpro
 ------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .bg-img .main_contents {
+    text-align: center;
+    padding-top: 200px;
+  }
+}
+
 /*タブレット版 ipad
 ------------------------*/
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -544,23 +551,17 @@ footer i {
   .bg-img #home {
     min-height: 100vh;
   }
-  .bg-img .main_contents {
-    padding-top: 80%;
-  }
   .bg-img .main_contents h1 {
     font-size: 11vmin;
     line-height: 11vmin;
-    white-space: nowrap;
-    width: 80%;
     margin: 0 auto;
     letter-spacing: 2vmin;
     padding-bottom: 2%;
   }
   .bg-img .main_contents p {
     font-size: 0.6875rem;
-    letter-spacing: 1vmin;
     white-space: nowrap;
-    width: 85%;
+    width: 95%;
   }
   /*About
 ------------------------*/

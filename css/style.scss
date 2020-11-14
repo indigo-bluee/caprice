@@ -254,7 +254,7 @@ $rine-color: #E2DCD9;
       background-position: center top;
       .main_contents {
           text-align: center;
-          padding-top: 25%;
+          padding-top: 300px;
           h1{
               color: #ffffff;
               margin-bottom: 1%;
@@ -267,7 +267,7 @@ $rine-color: #E2DCD9;
               padding: 5px 10px;
               font-weight: bold;
               width: 420px;
-              letter-spacing: 0.2rem;
+              letter-spacing: 0.1rem;
               margin: 0 auto;
               font-size: 0.8rem;
           }
@@ -434,8 +434,11 @@ footer {
 
  /*タブレット版 ipadpro
 ------------------------*/
-@media (min-width: 1200px) {
-  
+@media screen and (min-width:768px)and (max-width: 1023px) {
+  .bg-img .main_contents {
+    text-align: center;
+    padding-top: 200px;
+}
 }
 
 
@@ -522,12 +525,10 @@ footer {
   min-height: 100vh;
 }
 .main_contents {
-  padding-top: 80%;
+
   h1 {
     font-size: 11vmin;
     line-height: 11vmin;
-    white-space: nowrap;
-    width: 80%;
     margin: 0 auto;
     letter-spacing: 2vmin;
     padding-bottom: 2%;
@@ -535,9 +536,8 @@ footer {
   }
   p {
     font-size: 0.6875rem;
-    letter-spacing: 1vmin;
     white-space: nowrap;
-    width: 85%;
+    width: 95%;
 
   }
  }
